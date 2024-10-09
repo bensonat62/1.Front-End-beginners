@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <title>function return函式</title>
+  </head>
+  <!--網頁主畫面, 都寫在body內-->
+  <body>
+     //註解 - function return函式
+    <script>
+        /*
+        function test(n1,n2){
+            console.log(n1/n2);
+        }
+        test(3,4);
+        test("A","B");
+        */
+        function show(n1,n2){
+            let result=n1/n2;
+            console.log(n1+'/',n2+'=',result);
+            return result;
+        }
+        let ans=show(3,4);
+        console.log("final ="+ans);
+    </script> 
+  </body>
+</html>

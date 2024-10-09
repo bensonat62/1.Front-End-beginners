@@ -1,0 +1,35 @@
+.headline{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.list{
+  display:flex;
+  justify-content: center;
+}
+.product{
+ flex:none;width:280px;margin:10px;
+ text-align: center;
+ background-color: beige;
+}
+
+@media (max-width:1250px){
+    /*screen寬度 <1250時套用*/
+    .list{flex-wrap: wrap;
+    }
+    .product{
+        width:45%
+    }
+}
+
+@media (max-width:360px){
+    /*screen寬度 <360時套用*/
+    .headline{font-size: 15px;
+    }
+    .list{flex-wrap: wrap;
+    }
+    .product{
+        width:45%
+    }
+}

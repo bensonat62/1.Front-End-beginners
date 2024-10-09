@@ -1,0 +1,27 @@
+.frame{
+    display:flex;
+}
+.left{
+    background-color: red;
+    flex:none; /*固定水平配置 */
+    width:20%;
+}
+.right{
+    display:flex;
+    background-color: blue;
+    flex:50%; /to*固定水平配置 */
+    /* width:80%; */
+}
+.item{
+    background-color: palegreen;
+    flex:none;
+    width:100px;
+}
+
+.welcome{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    background-color: gray;
+    height:300px;
+}

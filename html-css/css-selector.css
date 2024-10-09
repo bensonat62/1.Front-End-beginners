@@ -1,0 +1,12 @@
+/*標籤名稱選擇器 */
+body{background-color:papayawhip}
+/*id選擇器 */
+#title{text-decoration: line-through}
+/*Class選擇器 */
+.block-1{
+    padding:20px;
+    font-weight:bold;
+    color:red
+}
+.block-2{margin:10px;border:0px dashed blue;font-weight:bold;color:greenyellow}
+.block-3{background-color:aqua;margin:3px;border:1px dashed blue;font-weight:bold;color:greenyellow}

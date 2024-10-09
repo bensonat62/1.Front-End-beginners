@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <title>運算元 運算子 </title>
+  </head>
+  <!--網頁主畫面, 都寫在body內-->
+  <body>
+     //註解 - 運算  
+    <script>
+      //算術運算 + - * /
+      let x=3+4;
+      console.log(x);
+      let y=17%4;
+      console.log(y);
+      //指定運算 + - * /
+      x=3+4;
+      x++; //7+1 =8
+      console.log(x);
+      //比較運算 > >= < <= ==
+      x=3>4;
+      console.log(x);
+      x=3; y=4;
+      console.log(x<y);
+      x="hello"=="test";
+      console.log(x);
+       //單元運算 ! ++ --
+      x=!x;
+      console.log(x);
+      a=1; 
+      a++; 
+      console.log(a);
+      // 邏輯運算: &&  ||
+      let test=true&&false;
+      console.log(test);
+      // 輸入2組數字, 求 2數相乘, 取得回傳值
+      let n1=prompt("第一組數字","");
+      let n2=prompt("第二組數字","");  
+      console.log(n1*n2);
+    </script> 
+  </body>
+</html>
