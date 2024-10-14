@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>99 multiple</title>
+</head>
+<body>
+    <script>
+        let result = '';
+        for (let i = 2, j = 1; i <= 9; j++) {
+            result += `${i} * ${j} = ${i*j}\t`;
+            if (j === 9) {
+                j = 0;
+                i++;
+                result += '\n';
+            console.log(result);
+            if (i<9) console.log('--------------------------------');
+            result='';
+            };
+        };
+        //console.log(result);
+    </script>
+</body>
+</html>
