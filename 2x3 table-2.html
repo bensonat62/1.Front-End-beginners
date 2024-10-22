@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2x4 Table表格</title>
+  <style>
+    table {
+      width: 50%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h1>2x4 Table</h1>
+  <table id="myTable">
+    <tr>
+      <th>文件編號</th>
+      <th>文件名稱</th>
+      <th>表單名稱</th>
+      <th>表單編號</th>
+    </tr>
+    <tr>
+      <td>Row1, Col1</td>
+      <td><a href="https://google.com">資訊安全管理手冊</a></td>
+      <td>BT-1-IM-01-F1</td>
+      <td><a href="https://google.com">管理者代表授權書</a></td>
+    </tr>
+    <tr>
+      <td>Row 2, Col 1</td>
+      <td>Row 2, Col 2</td>
+      <td>Row 2, Col 3</td>
+      <td>Row 2, Col 4</td>
+    </tr>
+  </table>
+
+  <script>
+    // JavaScript 部分可以用來修改或操作表格
+    document.getElementById('myTable').rows[1].cells[0].innerHTML = 'BT-1-IM-01';
+    //document.getElementById('myTable').rows[1].cells[1].innerHTML = '資訊安全管理手冊';
+    document.getElementById('myTable').rows[2].cells[0].innerHTML = 'BT-1-IM-02'; 
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隨機產生數字</title>
+</head>
+<body>
+    <script>
+        //產生10組
+        /* console.log('---產生10組數字 --------');
+        let num1=0;
+        for (let i=1;i<11;i++){
+             num1=Math.floor((Math.random()*10));
+             console.log(`第一組${i}是${num1}`)
+         }  
+        // 產生10組數字, 45-80整數
+        console.log('---產生10組數字, 45-80整數--------');
+        //let num1=0;
+        for (let i=1;i<11;i++){
+            num1=Math.floor((Math.random()*36)+45);
+            console.log(`第一組${i}是${num1}`)
+        } */
+        console.log('---建一個函式, 45-80產生10個整數--------');
+        // 建一個函式fn genNum(min,max)
+        let genNum = function(min,max){
+            
+            for (let i=1;i<7;i++){
+                if (min>max||max-min<10){
+                console.log('最大最小值的差需大於10且最大值必須大於最小值');
+                console.log(`第一數是${min},第二數是${max}`);
+                break;
+                }
+                num1=Math.floor((Math.random()*(max-min+1))+min);
+                console.log(`第一組${i}是${num1}`)    
+                            
+            }
+        } 
+       genNum(45,50); 
+       genNum(66,30);
+       genNum(45,86);
+    </script>
+</body>
+</html>

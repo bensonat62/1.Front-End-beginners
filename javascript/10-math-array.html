@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隨機產生數字</title>
+</head>
+<body>
+    <script>
+
+        console.log('---建一個函式, 45-80產生6個整數,且不重複--------');
+        let aryNum=[];
+        // 建一個函式fn genNum(min,max)
+        let genNum = function(min,max){
+            
+            for (let i=0;i<6;i++){
+                if (min>max||max-min<10){
+                console.log('最大最小值的差需大於10且最大值必須大於最小值');
+                console.log(`第一數是${min},第二數是${max}`);
+                break;
+                }
+                num=Math.floor((Math.random()*(max-min+1))+min);
+                console.log(`第一組${i}是${num}`)  
+                aryNum.push(num);            
+                for (let j = i + 1; j < aryNum.length; j++) {
+                    if (aryNum[j] === aryNum[i]) {
+                    //hasDuplicates = true;
+                    console.log('重複數字')
+                    aryNum.pop();
+                    break;
+                    }
+                }  
+                //aryNum.push(num);            
+            }
+        } 
+       //genNum(45,50); 
+       //genNum(66,30);
+       genNum(45,66);
+       //console.log(aryNum());
+    </script>
+</body>
+</html>
