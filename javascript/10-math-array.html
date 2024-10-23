@@ -8,11 +8,11 @@
 <body>
     <script>
 
-        console.log('---建一個函式, 45-80產生6個整數,且不重複--------');
+        //---建一個函式fn(數字1,數字2), 產生6個整數,且不重複-----;
         let aryNum=[];
-        // 建一個函式fn genNum(min,max)
+        // fn genNUM(min,max) 
         let genNum = function(min,max){
-            
+            console.log(`---函式 genNum(${min},${max}),產生產生6個整數,且不重複 ---`)
             for (let i=0;i<6;i++){
                 if (min>max||max-min<10){
                 console.log('最大最小值的差需大於10且最大值必須大於最小值');
@@ -20,13 +20,13 @@
                 break;
                 }
                 num=Math.floor((Math.random()*(max-min+1))+min);
-                console.log(`第一組${i}是${num}`)  
+                console.log(`Array[${i}]:第${i+1}組的數字是${num}`)  
                 aryNum.push(num);            
-                for (let j = i + 1; j < aryNum.length; j++) {
-                    if (aryNum[j] === aryNum[i]) {
-                    //hasDuplicates = true;
-                    console.log('重複數字')
+                for (let j = 1; j < aryNum.length; j++) {
+                    if (aryNum[i] === aryNum[j-1]) {
+                    console.log(`  ***重複第${j}組數字,重選新數字`)
                     aryNum.pop();
+                    i--; //重複數字,重新選數字, 迴圈i-1 
                     break;
                     }
                 }  
@@ -35,8 +35,9 @@
         } 
        //genNum(45,50); 
        //genNum(66,30);
-       genNum(45,66);
-       //console.log(aryNum());
+       //genNum(45,80);
+       genNum(1,45);
+        
     </script>
 </body>
 </html>
