@@ -4,17 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>隨機產生數字</title>
+    <style>
+        #result {
+            border:dashed;            
+            font-size: 20px;
+            color: purple;
+        }
+    </style>
 </head>
 <body>
+    <div style="padding:28px;font-weight:bold;color:red">隨機產生數字~</div>
+    <div id="result">The result will appear here.</div> 
+
     <script>
-        //---建一個函式fn(數字1,數字2), 產生6個整數,且不重複-----;
+        //---建一個函式fn(數字1,數字2), 產生[數字3}個整數,且不重複-----;
         let aryNum = new Array();  //let aryNum=[]; 宣告一次,呼叫完清空, 可以重複使用, 記憶體位置保留
-        // fn genNUM(min,max) 
-        let genNum = function(min,max){
-            console.log(`---函式 genNum(${min},${max}),產生產生6個整數,且不重複 ---`)
-            for (let i=0;i<6;i++){
-                if (min>max||max-min<10){
-                console.log('最大最小值的差需大於10且最大值必須大於最小值');
+        // fn genNUM(min,max,sets) 
+        let genNum = function(min,max,sets){
+            console.log(`---函式 genNum(${min},${max}),產生產生${sets}個整數,且不重複 ---`)
+            for (let i=0;i<sets;i++){
+                if (min>max||max-min<sets){
+                console.log('最大最小值的差需大於差且最大值必須大於最小值');
                 console.log(`第一數是${min},第二數是${max}`);
                 break;
                 }
@@ -30,7 +40,8 @@
                     break;
                     }
                 }  
-                //aryNum.push(num);            
+                // Browser顯示亂數結果
+                document.getElementById('result').innerText = `隨機產生亂數 ${min} to ${max},共${sets}組: ${aryNum}`;       
             }
         }
         //---建一個函式fn(前一次陣列產生的長度), 清除陣列的內容-----; 
@@ -40,11 +51,14 @@
         } 
        //genNum(45,50); 
        //genNum(66,30);
-       genNum(45,80);
-       aryLnth = aryNum.length;
-       clrAry(aryLnth);
+
+       //genNum(45,80,7);       
+       //aryLnth = aryNum.length;
+       //clrAry(aryLnth);
        
-       genNum(1,45);
+       genNum(3,45,10);
+       //document.getElementById('result').innerText = `隨機產生亂數 ${min} to ${max} is: ${aryNum}}`;
+       //document.getElementById('result').innerText = `隨機產生亂數 is: ${num}`;
        aryLnth = aryNum.length;
        clrAry(aryLnth);
         
