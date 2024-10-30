@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM練習</title>
+    <style>
+        .text{text-decoration: underline;font-size: 30px};
+    </style>
+</head>
+<body>
+    <h3>DOM網頁標題</h3>
+    <div id="content">DOM 頁面操作</div>
+    <button onclick="change();">點我</button>
+    <script>
+        function change(){
+            let elem=document.querySelector("#content");
+            elem.innerHTML="換成這樣";
+            elem.className="text";
+            elem.style.color="blue";
+        };
+
+    </script>
+</body>
+</html>

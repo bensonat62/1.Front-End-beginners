@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM操作</title>
+</head>
+<body>
+    <div>
+    <button><span onclick="changeToAbout();">關於我</span></button>
+    <button><span onclick="changeToExps();">經驗說明</span></button>
+    </div>
+    <hr/>
+    <div id="about">我是 酷哥~~~</div>
+    <div id="exps" style="display: none;">20年工作經驗, 心理系專家</div>
+    <script>
+        function changeToAbout(){
+            let divAbout=document.querySelector("#about");
+            let divExps=document.querySelector("#exps");
+            divAbout.style.display="block";
+            divExps.style.display="none"; 
+        }
+        function changeToExps(){
+            let divAbout=document.querySelector("#about");
+            let divExps=document.querySelector("#exps");
+            divAbout.style.display="none";
+            divExps.style.display="block";
+        }
+    </script>
+</body>
+</html>
